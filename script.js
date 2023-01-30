@@ -6,6 +6,8 @@ const btn = document.querySelector('[data-form-btn]');
 const createTask = (evento) => {
   evento.preventDefault();
   const input = document.querySelector('[data-form-input]');
+  const calendar = document.querySelector("[data-form-date]");
+  console.log(calendar);
   const value = input.value;
   const list = document.querySelector('[data-list]');
   const task = document.createElement('li');
