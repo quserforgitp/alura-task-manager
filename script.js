@@ -7,8 +7,9 @@ const createTask = (evento) => {
   evento.preventDefault();
   const input = document.querySelector('[data-form-input]');
   const calendar = document.querySelector("[data-form-date]");
-  console.log(calendar);
   const value = input.value;
+  const date = calendar.value;
+  console.log(date);
   const list = document.querySelector('[data-list]');
   const task = document.createElement('li');
   task.classList.add('card');
