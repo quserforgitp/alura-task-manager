@@ -33,7 +33,7 @@ const createTask = (evento) => {// crea la estructura html tomar datos y colocar
       dateFormat: dateFormat */
   }
 
-  sessionStorage.setItem("tasks",JSON.stringify(taskObj));// recibe llave y luego valor a asociar con la llave (ambos tienen que ser string) persiste solamente mientras la pestania esta abierta
+  localStorage.setItem("tasks",JSON.stringify(taskObj));// persistenete sin importar si se cierra el navegador o pestania (recuerda que localStorage es un objeto de la API JS)
 
 
 
