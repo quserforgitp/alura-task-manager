@@ -25,6 +25,8 @@ const createTask = (evento) => {// crea la estructura html tomar datos y colocar
   //backticks
   const taskContent = document.createElement('div');
 
+  console.log(value,dateFormat);// esto es lo que necesitamos guardar con el api de web storage (en lugar de cookies)
+
   const titleTask = document.createElement('span');
   titleTask.classList.add('task');
   titleTask.innerText = value;
