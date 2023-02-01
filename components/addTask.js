@@ -31,7 +31,7 @@ export const addTask = (evento) => {
 
 
   
-  const createTask = ({ value,dateFormat }) => {
+  export const createTask = ({ value,dateFormat }) => {
     
     const task = document.createElement('li');
         task.classList.add('card');
@@ -44,7 +44,7 @@ export const addTask = (evento) => {
         taskContent.appendChild(checkComplete());
         taskContent.appendChild(titleTask);
         // task.innerHTML = content;
-        
+
     const dateElement = document.createElement("span");
         dateElement.innerHTML = dateFormat;
         task.appendChild(taskContent);
