@@ -14,9 +14,9 @@ const addTask = (evento) => {// add la estructura html para que los elementos se
 const createTask = (evento) => {// crea la estructura html tomar datos y colocarlos donde corresponde (no los add por lo que no son visibles aun)
   evento.preventDefault();
   const input = document.querySelector('[data-form-input]');
-  const calendar = document.querySelector("[data-form-date]");
+  const calendar = document.querySelector("[data-form-date]"); // captura el elemento input para entrada de fecha por el usuario (es todo el elemento)
   const value = input.value;
-  const date = calendar.value;
+  const date = calendar.value;//captura el valor del elemento que es la fecha en si
   const dateFormat = moment(date).format('DD/MM/YYYY');
   /* console.log(dateFormat); */
   const task = document.createElement('li');
@@ -41,3 +41,10 @@ const createTask = (evento) => {// crea la estructura html tomar datos y colocar
 
 //Arrow functions o funciones anonimas
 btn.addEventListener('click', addTask);
+
+/*  CONOCIMIENTOS:
+
+    1.- Utilizar el componente calendario
+    2.- Manipular fechas
+    3.- Destructurar objetos en javascript
+*/
