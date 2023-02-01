@@ -11,3 +11,5 @@ export const readTasks = () => {
         list.appendChild(createTask(task));
     });
 }
+
+//fin de la clase03
