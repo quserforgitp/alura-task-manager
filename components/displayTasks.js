@@ -26,9 +26,8 @@ export const displayTasks = () => {
 
 }
 
-//fin de la clase03
-/* conocimientos clase03
-    1.-Recorrer el arreglo con forEach() de las tareas guardadas en LocalStorage
-    2.-Utilizar pipe
-    3.-Convertir las tareas almacenadas en formato string a objetos con JSON.parse()
+//fin de la clase04
+/* conocimientos clase04
+    1.-Filtrar elementos de un arreglo
+    2.-Ordenar los elementos del LocalStorage
 */
