@@ -11,6 +11,8 @@ const addTask = (evento) => {// add la estructura html para que los elementos se
 
 }
 
+const tasklist = [];// para almacenar array de las tareas del localstorage, (el const para los arreglos fija el tipo de dato que almacenan no sus valores, los valores pueden variar pero no el tipo de dato de los valores)
+
 const createTask = (evento) => {// crea la estructura html tomar datos y colocarlos donde corresponde (no los add por lo que no son visibles aun)
   evento.preventDefault();
   const input = document.querySelector('[data-form-input]');
@@ -33,7 +35,9 @@ const createTask = (evento) => {// crea la estructura html tomar datos y colocar
       dateFormat: dateFormat */
   }
 
-  localStorage.setItem("tasks",JSON.stringify(taskObj));// persistenete sin importar si se cierra el navegador o pestania (recuerda que localStorage es un objeto de la API JS)
+  tasklist.push(taskObj);// agregando al arreglo de las tareas el value,dateFormat
+
+  localStorage.setItem("tasks",JSON.stringify(tasklist));// persistenete sin importar si se cierra el navegador o pestania (recuerda que localStorage es un objeto de la API JS)
 
 
 
