@@ -8,6 +8,6 @@ export const readTasks = () => {
     const tasklist = JSON.parse(localStorage.getItem("tasks")) || [];
     
     tasklist.forEach((task) => {
-        console.log(createTask(task));
+        list.appendChild(createTask(task));
     });
 }
