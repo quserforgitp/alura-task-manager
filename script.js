@@ -10,7 +10,7 @@ const createTask = (evento) => {
   const value = input.value;
   const date = calendar.value;
   const dateFormat = moment(date).format('DD/MM/YYYY');
-  console.log(dateFormat);
+  /* console.log(dateFormat); */
   const list = document.querySelector('[data-list]');
   const task = document.createElement('li');
   task.classList.add('card');
@@ -24,7 +24,9 @@ const createTask = (evento) => {
   taskContent.appendChild(checkComplete());
   taskContent.appendChild(titleTask);
   // task.innerHTML = content;
-
+  const dateElement = document.createElement("span");
+  dateElement.innerHTML = dateFormat;
+  console.log(dateElement);
   task.appendChild(taskContent);
   task.appendChild(deleteIcon());
   list.appendChild(task);
