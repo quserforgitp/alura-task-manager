@@ -10,10 +10,12 @@ export const addTask = (evento) => {// add la estructura html para que los eleme
   
   }
   
-  const tasklist = [];// para almacenar array de las tareas del localstorage, (el const para los arreglos fija el tipo de dato que almacenan no sus valores, los valores pueden variar pero no el tipo de dato de los valores)
+
   
   const createTask = (evento) => {// crea la estructura html tomar datos y colocarlos donde corresponde (no los add por lo que no son visibles aun)
     evento.preventDefault();
+    const tasklist = JSON.parse(localStorage.getItem("tasks")) || [];// en caso de que sea null poner [] (arreglo vacio)
+    console.log(tasklist);// muestra en consola el arreglo de la lista de tareas guardadas
     const input = document.querySelector('[data-form-input]');
     const calendar = document.querySelector("[data-form-date]"); // captura el elemento input para entrada de fecha por el usuario (es todo el elemento)
     const value = input.value;
