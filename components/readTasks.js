@@ -1,4 +1,5 @@
 import { createTask } from "./addTask.js";
+import dateElement from "./dateElement.js";
 
 export const readTasks = () => {
 
@@ -6,8 +7,13 @@ export const readTasks = () => {
     console.log(list);
     
     const tasklist = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    console.log(dateElement("14/06/2023"));
     
     tasklist.forEach((task) => {
+
+        list.appendChild(dateElement(task.dateFormat));
+
         list.appendChild(createTask(task));
     });
 }
