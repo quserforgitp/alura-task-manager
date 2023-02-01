@@ -25,7 +25,17 @@ const createTask = (evento) => {// crea la estructura html tomar datos y colocar
   //backticks
   const taskContent = document.createElement('div');
 
-  console.log(value,dateFormat);// esto es lo que necesitamos guardar con el api de web storage (en lugar de cookies)
+  const taskObj = {
+    value,
+    dateFormat
+    /* lo mismo que 
+      value: value,
+      dateFormat: dateFormat */
+  }
+
+  sessionStorage.setItem("tasks",JSON.stringify(taskObj));// recibe llave y luego valor a asociar con la llave (ambos tienen que ser string) persiste solamente mientras la pestania esta abierta
+
+
 
   const titleTask = document.createElement('span');
   titleTask.classList.add('task');
