@@ -47,12 +47,9 @@ export const addTask = (evento) => {
 
     const taskContent = document.createElement('div');
 
-    console.log(complete);
-
     const check = checkComplete(id);
 
     if (complete) {
-      console.log("completada");
       check.classList.toggle('fas');
       check.classList.toggle('completeIcon');
       check.classList.toggle('far');
@@ -69,6 +66,6 @@ export const addTask = (evento) => {
         dateElement.innerHTML = dateFormat;
         task.appendChild(taskContent);
         task.appendChild(dateElement);
-        task.appendChild(deleteIcon());
+        task.appendChild(deleteIcon(id));
     return task;
   };
