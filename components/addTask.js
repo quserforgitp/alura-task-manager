@@ -69,3 +69,5 @@ export const addTask = (evento) => {
         task.appendChild(deleteIcon(id));
     return task;
   };
+
+  

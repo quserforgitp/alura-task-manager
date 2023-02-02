@@ -18,3 +18,12 @@ const deleteTask = (id) => {
 };
 
 export default deleteIcon;
+
+
+/* CONOCIMIENTOS:
+  1.- Cambiar un estado booleano utilizando el operador de negacion 
+  2.- Eliminar datos del localStorage utilizando el metodo spllice() para arrays
+  3.- Subir el proyecto a github PAGES ->
+      settings -> pages --> source (rama de la cual queremos que tome el codigo) --> save
+      --> choose a theme 
+*/
